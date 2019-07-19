@@ -1,14 +1,20 @@
 import React from 'react';
 import CreateCard from './CreateCard';
+import styled from 'styled-components';
 
+const Flex = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`;
 
 const Cards = (props) => {
     return (
-        <div>
+        <Flex>
             {props.characters.map((character, i) => (
                 <CreateCard character={character} key={i} />
             ))}
-        </div>
+        </Flex>
     )
 }
 
